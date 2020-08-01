@@ -1,38 +1,14 @@
-{
-    "Anawhata": {
-        "name": "Anawhata"
-    },
-    "Harataonga": {
-        "name": "Harataonga"
-    },
-    "Karekare": {
-        "name": "Karekare"
-    },
-    "Karioitahi": {
-        "name": "Karioitahi"
-    },
-    "Muriwai": {
-        "name": "Muriwai"
-    },
-    "Omaha": {
-        "name": "Omaha"
-    },
-    "Pakiri Beach": {
-        "name": "Pakiri Beach"
-    },
-    "Piha": {
-        "name": "Piha"
-    },
-    "Snells Beach": {
-        "name": "Snells Beach"
-    },
-    "Tāwharanui Peninsula": {
-        "name": "Tāwharanui Peninsula"
-    },
-    "Te Henga (Bethells Beach)": {
-        "name": "Te Henga (Bethells Beach)"
-    },
-    "Whatipu": {
-        "name": "Whatipu"
-    }
-}
+[
+    "Anawhata",
+    "Harataonga",
+    "Karekare",
+    "Karioitahi",
+    "Muriwai",
+    "Omaha",
+    "Pakiri Beach",
+    "Piha",
+    "Snells Beach",
+    "Tāwharanui Peninsula",
+    "Te Henga (Bethells Beach)",
+    "Whatipu"
+]
