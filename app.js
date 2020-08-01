@@ -84,11 +84,14 @@ function onListening() {
 const geocode = require('./controllers/geocode')
 // geocode('orewa').then(x => console.log(x))
 
-const tides = require('./controllers/tides');
+const tides = require('./controllers/weather');
 
-// (async function() {
-//     console.log(await tides(await geocode('orewa')))
-// })();
+(async function() {
+    
+})();
+
+// geocode('rwjkgrkg')
+
 
 
 const nearest = require('./controllers/nearest')

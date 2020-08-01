@@ -19,17 +19,43 @@ async function getTides({ lat, long }, today = false) {
         return err
     }
 }
+async function getWind({ lat, long }) {
+    try {
+        const response = await axios.get(process.env.OPEN_WEATHER_MAP_URL, {
+            params: {
+                appid: process.env.OPEN_WEATHER_MAP_API_KEY,
+                lat,
+                lon: long,
+            },
+        })
+        // retrieve the useful information from the api call and return
+        console.log(response)
+        const tideInfo = response.data.values
+        return tideInfo
+    }
+    catch (err) {
+        console.log(err)
+        return err
+    }
+}
 
-async function tides(latLng) {
-    const today = getTides(latLng, true)
-    const weekPeaks = getTides(latLng)
+;(async function() {
+    const geocode = require('./geocode')
+    console.log('hey')
+    getWind(await geocode('orewa'))
+})()
 
-    const response = await Promise.all([ today, weekPeaks ])
+async function getWeather(latLng) {
+    const todayTides = getTides(latLng, true)
+    const weekPeaksTides = getTides(latLng)
+
+
+    const response = await Promise.all([ todayTides, weekPeaksTides ])
 
     return {
         nextLowAndHigh: getNextLowAndHigh(response[1].slice(0,2)),
-        today: response[0],
-        weekPeaks: response[1]
+        todayTides: response[0],
+        weekPeaksTides: response[1]
     }
 }
 
@@ -46,4 +72,4 @@ function getNextLowAndHigh(nextTides) {
     return { low, high }
 }
 
-module.exports = tides
+module.exports = getWeather

@@ -1,5 +1,5 @@
 const geocode = require('./geocode')
-const tides = require('./tides')
+const tides = require('./weather')
 const typos = require('./typos')
 
 async function search(req, res) {
