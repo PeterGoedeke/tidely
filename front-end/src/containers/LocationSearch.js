@@ -11,36 +11,50 @@ import * as locations from "../assets/beaches/beaches.json";
 import tidelyLogo from "../assets/icons/logo.png";
 import lightWave from "../assets/background-images/lightwave.png";
 import darkWave from "../assets/background-images/darkwave.png";
+import searchIcon from "../assets/icons/search-2.png";
 
 class LocationSearch extends Component {
   state = {
-    autocomplete: null,
+    autocomplete: "",
+    inputValue: "",
   };
 
   componentDidMount() {
     //
-    console.log(locations[0]);
+    console.log(locations.default);
   }
 
   inputFeedAutocomplete = (input) => {
-    for (const location of locations) {
-      if (
-        input.value &&
-        location.toLowerCase().startsWith(input.value.toLowerCase())
-      ) {
+    for (let location of locations.default) {
+      //console.log(locations.default[i]);
+      //console.log(input);
+      //console.log(location);
+      if (input && location.toLowerCase().startsWith(input.toLowerCase())) {
         let temp;
-        temp =
-          input.value +
-          location.toLowerCase().split(input.location.toLowerCase())[1];
+        temp = input + location.slice(input.length, location.length);
         this.setState({
           autocomplete: temp,
         });
+        return;
       }
+      this.setState({
+        autocomplete: "",
+      });
     }
+    //console.log(this.state.autocomplete);
     //Clearing
     // hintInput.value = "";
+    if (input === "") {
+      this.setState({
+        autocomplete: "",
+      });
+    }
+  };
+
+  inputChangeHanlder = (event) => {
+    this.inputFeedAutocomplete(event.target.value);
     this.setState({
-      autocomplete: "",
+      inputValue: event.target.value,
     });
   };
 
@@ -51,14 +65,28 @@ class LocationSearch extends Component {
   };
 
   render() {
+    console.log(this.state.autocomplete);
     return (
       <div className={classes.LocationSearch}>
         <img className={classes.Logo} src={tidelyLogo} alt="Tidely Logo" />
         <div className={classes.SearchContainer}>
           <div className={classes.SearchPrompt}>
-            What is the <strong>tide</strong> like at the...
+            What's the <strong>tide</strong> like at the...
           </div>
-          <div className={classes.SearchBar}>placeolder search bar div</div>
+          <div className={classes.InputContainer}>
+            <input
+              className={classes.TopLevelInput}
+              placeholder="Enter a beach location"
+              value={this.state.inputValue}
+              onChange={(event) => this.inputChangeHanlder(event)}
+            />
+            <input
+              className={classes.BottomLevelInput}
+              disabled
+              value={this.state.autocomplete}
+            />
+            <img src={searchIcon} className={classes.SearchIcon} />
+          </div>
         </div>
         <img className={classes.LightWave} src={lightWave} />
         <img className={classes.DarkWave} src={darkWave} />
