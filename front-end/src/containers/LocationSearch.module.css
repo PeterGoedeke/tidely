@@ -23,7 +23,7 @@
 
   .SearchPrompt {
     text-align: center;
-    font-size: 2.1em;
+    font-size: 50px;
     font-family: "Raleway", sans-serif;
     color: white;
   }
@@ -126,5 +126,264 @@
     bottom: 0;
     width: 2.3vh;
     margin-bottom: 1%;
+  }
+
+  
+ /* 2K+ resolution */
+@media (min-width: 2049px) {
+    
+}
+
+/* 4K+ resolution */
+@media (min-width: 3839px) {
+}
+
+
+/*
+
+16:9 aspect ratio resolutions: 1024×576, 1152×648, 1280×720, 1366×768, 1600×900, 1920×1080, 2560×1440 and 3840×2160
+*/
+
+@media only screen and (orientation: portrait) {
+
+    .Logo{
+        top: 2%;
+        width: 20%;
+    }
+    @media (max-width: 1024px) {
+      /*Ipad Pro */
+      .SearchPrompt{
+        font-size: 45px;
+        }
+        .InputContainer{
+            margin-top: 10%;
+            width: 55%;
+        }
+        .TopLevelInput{
+            font-size: 30px;
+        }
+        .BottomLevelInput{
+            font-size: 30px;
+        }
+
+        .DarkWave{
+            bottom: -1%;
+            width: 200%;
+        }
+        .LightWave{
+            /* bottom: 1%; */
+            width: 200%;
+        }
+    }
+  
+    @media (max-width: 768px) {
+      /*Ipad */
+      .SearchPrompt{
+        font-size: 35px;
+        }
+        .InputContainer{
+            margin-top: 10%;
+            width: 55%;
+        }
+        .TopLevelInput{
+            font-size: 25px;
+        }
+        .BottomLevelInput{
+            font-size: 25px;
+        }
+
+        .DarkWave{
+            bottom: 0%;
+            width: 220%;
+        }
+        .LightWave{
+            bottom: 1%;
+            width: 220%;
+        }
+    }
+    @media (max-width: 640px) {
+    }
+  
+    @media (max-width: 560px) {
+    }
+  
+    /*480px is max phone size*/
+    @media (max-width: 481px) {
+
+        .SearchPrompt{
+            font-size: 21px;
+            }
+            .InputContainer{
+                margin-top: 12%;
+                width: 70%;
+            }
+            .TopLevelInput{
+                font-size: 20px;
+            }
+            .BottomLevelInput{
+                font-size: 20px;
+            }
+            .Logo{
+                width: 28%;
+                top: 5%;
+                left: 35%;
+            }
+            .DarkWave{
+                bottom: 0%;
+                width: 300%;
+            }
+            .LightWave{
+                bottom: 1%;
+                width: 300%;
+            }
+    }
+  
+    @media (max-width: 375px) {
+      /*Iphone X */
+
+      .SearchPrompt{
+        font-size: 21px;
+        }
+        .InputContainer{
+            margin-top: 12%;
+            width: 70%;
+        }
+        .TopLevelInput{
+            font-size: 20px;
+        }
+        .BottomLevelInput{
+            font-size: 20px;
+        }
+        .Logo{
+            width: 28%;
+            top: 5%;
+            left: 35%;
+        }
+        .DarkWave{
+            bottom: 0%;
+            width: 300%;
+        }
+        .LightWave{
+            bottom: 1%;
+            width: 300%;
+        }
+    }
+  }
+  
+  @media only screen and (orientation: landscape) {
+    @media (max-width: 2560px) {
+    }
+  
+    @media (max-width: 2560px) {
+    }
+  
+    @media (max-width: 1920px) {
+    }
+  
+    @media (max-width: 1600px) {
+        .SearchPrompt{
+            font-size: 40px;
+        }
+        .TopLevelInput{
+            font-size: 20px;
+        }
+        .BottomLevelInput{
+            font-size: 20px;
+        }
+    }
+  
+    @media (max-width: 1366px) {
+        .SearchPrompt{
+            font-size: 35px;
+        }
+
+        .TopLevelInput{
+            font-size: 20px;
+        }
+        .BottomLevelInput{
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .SearchPrompt{
+            font-size: 32px;
+        }
+        .TopLevelInput{
+            font-size: 20px;
+        }
+        .BottomLevelInput{
+            font-size: 20px;
+        }
+    }
+  
+    @media (max-width: 1152px) {
+    }
+  
+    @media (max-width: 1024px) {
+      /*Ipad */
+        .SearchPrompt{
+            font-size: 30px;
+        }
+        .TopLevelInput{
+            font-size: 25px;
+        }
+        .BottomLevelInput{
+            font-size: 25px;
+        }
+        
+
+    }
+  
+    @media (max-width: 896px) {
+      /*Iphone 11 PRO */
+      .SearchPrompt{
+          font-size: 25px;
+      }
+      .TopLevelInput{
+        font-size: 15px;
+        }
+      .BottomLevelInput{
+        font-size: 15px;
+      }
+
+    }
+  
+    @media (max-width: 823px) {
+
+    }
+  
+    @media (max-width: 812px) {
+        .DarkWave{
+            width: 200%;
+        }
+        .LightWave{
+            width: 200%;
+        }
+    }
+  
+    @media (max-width: 736px) {
+
+        .SearchPrompt{
+            font-size: 22px;
+        }
+        .TopLevelInput{
+            font-size: 15px;
+        }
+        .BottomLevelInput{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 667px){
+        .SearchPrompt{
+            font-size: 20px;
+        }
+        .TopLevelInput{
+            font-size: 15px;
+        }
+        .BottomLevelInput{
+            font-size: 15px;
+        }
+    }
   }
   
