@@ -1,6 +1,7 @@
 const levenshtein = require('./levenshtein')
 
-const nzBeaches = ['orewa', 'hatfields', 'mission bay']
+const nzBeaches = require('../front-end/src/assets/beaches/beaches.json')
+nzBeaches.map(beach => beach.split(',')[0])
 
 function typos(string) {
     let suggestions = []
