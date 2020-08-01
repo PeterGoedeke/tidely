@@ -1,4 +1,4 @@
-.LocationSearch{
+.LocationSearch {
     height: 100%;
     width: 100%;
     display: flex;
@@ -19,23 +19,23 @@
     align-items: center;
     margin-bottom: 8%;
     width: 100%;
-  }
+}
 
-  .SearchPrompt {
+.SearchPrompt {
     text-align: center;
     font-size: 50px;
     font-family: "Raleway", sans-serif;
     color: white;
-  }
+}
 
-.Logo{
+.Logo {
     position: absolute;
     width: 12%;
     top: 5%;
     left: 3%;
 }
 
-.LightWave{
+.LightWave {
     position: absolute;
     bottom: 0%;
     width: 150%;
@@ -45,7 +45,7 @@
     animation-timing-function: linear;
 }
 
-.DarkWave{
+.DarkWave {
     position: absolute;
     bottom: -3%;
     width: 150%;
@@ -56,39 +56,36 @@
     animation-timing-function: linear;
 }
 
-@keyframes wave1{
+@keyframes wave1 {
     0% {
         transform: translate(0px, 0px);
     }
-    50%{
+    50% {
         transform: translate(4.2%, -20px);
-    } 
-    100%{
+    }
+    100% {
         transform: translate(8.4%, 0px);
     }
 }
 
-@keyframes wave2{
+@keyframes wave2 {
     0% {
         transform: translate(0px, 0px);
     }
-    50%{
+    50% {
         transform: translate(-4.2%, 10px);
-    } 
-    100%{
+    }
+    100% {
         transform: translate(-8.4%, 0px);
     }
 }
 
-
 .InputContainer {
     position: relative;
     width: 40%;
-  
     margin-top: 5%;
-  }
+}
 
-  
 .TopLevelInput {
     font-family: "Raleway", sans-serif;
     position: absolute;
@@ -100,13 +97,14 @@
     color: white;
     bottom: 0;
     font-weight: 300;
-  
     font-size: 25px;
-  }
-  .TopLevelInput::placeholder {
+}
+
+.TopLevelInput::placeholder {
     color: rgba(255, 255, 255, 0.6);
-  }
-  .BottomLevelInput {
+}
+
+.BottomLevelInput {
     font-family: "Raleway", sans-serif;
     position: absolute;
     z-index: 3;
@@ -119,33 +117,33 @@
     color: rgba(255, 255, 255, 0.6);
     font-size: 25px;
     font-weight: 300;
-  }
-  .SearchIcon {
+}
+
+.SearchIcon {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 2.3vh;
     margin-bottom: 1%;
-  }
-  .SuggestionsContainer {
+}
+
+.SuggestionsContainer {
     display: flex;
     flex-direction: column;
     position: absolute;
     font-family: "Raleway", sans-serif;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     padding: 2%;
-  }
-  
- /* 2K+ resolution */
-@media (min-width: 2049px) {
-    
 }
+
+/* 2K+ resolution */
+
+@media (min-width: 2049px) {}
 
 /* 4K+ resolution */
-@media (min-width: 3839px) {
-}
 
+@media (min-width: 3839px) {}
 
 /*
 
@@ -153,245 +151,211 @@
 */
 
 @media only screen and (orientation: portrait) {
-
-    .Logo{
+    .Logo {
         top: 2%;
         width: 20%;
     }
     @media (max-width: 1024px) {
-      /*Ipad Pro */
-      .SearchPrompt{
-        font-size: 45px;
+        /*Ipad Pro */
+        .SearchPrompt {
+            font-size: 45px;
         }
-        .InputContainer{
+        .InputContainer {
             margin-top: 10%;
             width: 55%;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 30px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 30px;
         }
-
-        .DarkWave{
+        .DarkWave {
             bottom: -1%;
             width: 200%;
         }
-        .LightWave{
+        .LightWave {
             /* bottom: 1%; */
             width: 200%;
         }
     }
-  
     @media (max-width: 768px) {
-      /*Ipad */
-      .SearchPrompt{
-        font-size: 35px;
+        /*Ipad */
+        .SearchPrompt {
+            font-size: 35px;
         }
-        .InputContainer{
+        .InputContainer {
             margin-top: 10%;
             width: 55%;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 25px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 25px;
         }
-
-        .DarkWave{
+        .DarkWave {
             bottom: 0%;
             width: 220%;
         }
-        .LightWave{
+        .LightWave {
             bottom: 1%;
             width: 220%;
         }
     }
-    @media (max-width: 640px) {
-    }
-  
-    @media (max-width: 560px) {
-    }
-  
+    @media (max-width: 640px) {}
+    @media (max-width: 560px) {}
     /*480px is max phone size*/
     @media (max-width: 481px) {
-
-        .SearchPrompt{
+        .SearchPrompt {
             font-size: 21px;
-            }
-            .InputContainer{
-                margin-top: 12%;
-                width: 70%;
-            }
-            .TopLevelInput{
-                font-size: 20px;
-            }
-            .BottomLevelInput{
-                font-size: 20px;
-            }
-            .Logo{
-                width: 28%;
-                top: 5%;
-                left: 35%;
-            }
-            .DarkWave{
-                bottom: 0%;
-                width: 300%;
-            }
-            .LightWave{
-                bottom: 1%;
-                width: 300%;
-            }
-    }
-  
-    @media (max-width: 375px) {
-      /*Iphone X */
-
-      .SearchPrompt{
-        font-size: 21px;
         }
-        .InputContainer{
+        .InputContainer {
             margin-top: 12%;
             width: 70%;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 20px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 20px;
         }
-        .Logo{
+        .Logo {
             width: 28%;
             top: 5%;
             left: 35%;
         }
-        .DarkWave{
+        .DarkWave {
             bottom: 0%;
             width: 300%;
         }
-        .LightWave{
+        .LightWave {
             bottom: 1%;
             width: 300%;
         }
     }
-  }
-  
-  @media only screen and (orientation: landscape) {
-    @media (max-width: 2560px) {
+    @media (max-width: 375px) {
+        /*Iphone X */
+        .SearchPrompt {
+            font-size: 21px;
+        }
+        .InputContainer {
+            margin-top: 12%;
+            width: 70%;
+        }
+        .TopLevelInput {
+            font-size: 20px;
+        }
+        .BottomLevelInput {
+            font-size: 20px;
+        }
+        .Logo {
+            width: 28%;
+            top: 5%;
+            left: 35%;
+        }
+        .DarkWave {
+            bottom: 0%;
+            width: 300%;
+        }
+        .LightWave {
+            bottom: 1%;
+            width: 300%;
+        }
     }
-  
-    @media (max-width: 2560px) {
-    }
-  
-    @media (max-width: 1920px) {
-    }
-  
+}
+
+@media only screen and (orientation: landscape) {
+    @media (max-width: 2560px) {}
+    @media (max-width: 2560px) {}
+    @media (max-width: 1920px) {}
     @media (max-width: 1600px) {
-        .SearchPrompt{
+        .SearchPrompt {
             font-size: 40px;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 20px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 20px;
         }
     }
-  
     @media (max-width: 1366px) {
-        .SearchPrompt{
+        .SearchPrompt {
             font-size: 35px;
         }
-
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 20px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 20px;
         }
     }
-
     @media (max-width: 1280px) {
-        .SearchPrompt{
+        .SearchPrompt {
             font-size: 32px;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 20px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 20px;
         }
     }
-  
-    @media (max-width: 1152px) {
-    }
-  
+    @media (max-width: 1152px) {}
     @media (max-width: 1024px) {
-      /*Ipad */
-        .SearchPrompt{
+        /*Ipad */
+        .SearchPrompt {
             font-size: 30px;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 25px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 25px;
         }
-        
-
     }
-  
     @media (max-width: 896px) {
-      /*Iphone 11 PRO */
-      .SearchPrompt{
-          font-size: 25px;
-      }
-      .TopLevelInput{
-        font-size: 15px;
+        /*Iphone 11 PRO */
+        .SearchPrompt {
+            font-size: 25px;
         }
-      .BottomLevelInput{
-        font-size: 15px;
-      }
-
+        .TopLevelInput {
+            font-size: 15px;
+        }
+        .BottomLevelInput {
+            font-size: 15px;
+        }
     }
-  
-    @media (max-width: 823px) {
-
-    }
-  
+    @media (max-width: 823px) {}
     @media (max-width: 812px) {
-        .DarkWave{
+        .DarkWave {
             width: 200%;
         }
-        .LightWave{
+        .LightWave {
             width: 200%;
         }
     }
-  
     @media (max-width: 736px) {
-
-        .SearchPrompt{
+        .SearchPrompt {
             font-size: 22px;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 15px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 15px;
         }
     }
-    @media (max-width: 667px){
-        .SearchPrompt{
+    @media (max-width: 667px) {
+        .SearchPrompt {
             font-size: 20px;
         }
-        .TopLevelInput{
+        .TopLevelInput {
             font-size: 15px;
         }
-        .BottomLevelInput{
+        .BottomLevelInput {
             font-size: 15px;
         }
     }
-  }
-  
+}
