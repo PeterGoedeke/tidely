@@ -10,6 +10,8 @@ clientToken: 'pub861c78c8f54332c2c169c4fbc533cef5'
 
 ## AWS
 ssh -i BigCommitLabs.pem ec2-user@52.65.42.81
+AWS TAM: Taz Hussein <awstas@amazon.com>
+
 
 ## Team - Big Commit Labs
 - Peter
