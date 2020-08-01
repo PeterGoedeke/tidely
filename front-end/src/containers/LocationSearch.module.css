@@ -1,149 +1,178 @@
 .LocationSearch {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #62B6CB;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #62b6cb;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .SearchContainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8%;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8%;
+  width: 100%;
 }
 
 .SearchPrompt {
-    text-align: center;
-    font-size: 50px;
-    font-family: "Raleway", sans-serif;
-    color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
 
 .Logo {
-    position: absolute;
-    width: 12%;
-    top: 5%;
-    left: 3%;
+  position: absolute;
+  width: 12%;
+  top: 5%;
+  left: 3%;
 }
 
 .LightWave {
-    position: absolute;
-    bottom: 0%;
-    width: 150%;
-    animation-name: wave1;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  position: absolute;
+  bottom: 0%;
+  width: 150%;
+  animation-name: wave1;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 1;
 }
 
 .DarkWave {
-    position: absolute;
-    bottom: -3%;
-    width: 150%;
-    left: -12%;
-    animation-name: wave2;
-    animation-duration: 6.7s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  position: absolute;
+  bottom: -3%;
+  width: 150%;
+  left: -12%;
+  animation-name: wave2;
+  animation-duration: 6.7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 2;
 }
 
 @keyframes wave1 {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    50% {
-        transform: translate(4.2%, -20px);
-    }
-    100% {
-        transform: translate(8.4%, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(4.2%, -20px);
+  }
+  100% {
+    transform: translate(8.4%, 0px);
+  }
 }
 
 @keyframes wave2 {
-    0% {
-        transform: translate(0px, 0px);
-    }
-    50% {
-        transform: translate(-4.2%, 10px);
-    }
-    100% {
-        transform: translate(-8.4%, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-4.2%, 10px);
+  }
+  100% {
+    transform: translate(-8.4%, 0px);
+  }
 }
 
 .InputContainer {
-    position: relative;
-    width: 40%;
-    margin-top: 5%;
+  position: relative;
+  width: 40%;
+  margin-top: 5%;
 }
 
 .TopLevelInput {
-    font-family: "Raleway", sans-serif;
-    position: absolute;
-    z-index: 4;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    outline: 0;
-    width: 100%;
-    color: white;
-    bottom: 0;
-    font-weight: 300;
-    font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: white;
+  bottom: 0;
+  font-weight: 300;
+  font-size: 25px;
 }
 
 .TopLevelInput::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .BottomLevelInput {
-    font-family: "Raleway", sans-serif;
-    position: absolute;
-    z-index: 3;
-    border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0);
-    outline: 0;
-    bottom: 0;
-    width: 100%;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 25px;
-    font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  z-index: 3;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+  outline: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 25px;
+  font-weight: 300;
 }
 
 .SearchIcon {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 2.3vh;
-    margin-bottom: 1%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2.3vh;
+  margin-bottom: 1%;
+}
+
+.CrossIcon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 2.3vh;
+  margin-bottom: 1%;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .SuggestionsContainer {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    font-family: "Raleway", sans-serif;
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 100%;
-    padding: 2%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+
+  border-radius: 0px 0px 15px 15px;
+  width: 100%;
+  z-index: 5;
+}
+.SuggestionSpan {
+  color: rgba(0, 0, 0, 0.5);
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1%;
+  cursor: pointer;
+}
+
+.SuggestionSpan:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* 2K+ resolution */
 
-@media (min-width: 2049px) {}
+@media (min-width: 2049px) {
+}
 
 /* 4K+ resolution */
 
-@media (min-width: 3839px) {}
+@media (min-width: 3839px) {
+}
 
 /*
 
@@ -151,211 +180,218 @@
 */
 
 @media only screen and (orientation: portrait) {
+  .Logo {
+    top: 2%;
+    width: 20%;
+  }
+  @media (max-width: 1024px) {
+    /*Ipad Pro */
+    .SearchPrompt {
+      font-size: 45px;
+    }
+    .InputContainer {
+      margin-top: 10%;
+      width: 55%;
+    }
+    .TopLevelInput {
+      font-size: 30px;
+    }
+    .BottomLevelInput {
+      font-size: 30px;
+    }
+    .DarkWave {
+      bottom: -1%;
+      width: 200%;
+    }
+    .LightWave {
+      /* bottom: 1%; */
+      width: 200%;
+    }
+  }
+  @media (max-width: 768px) {
+    /*Ipad */
+    .SearchPrompt {
+      font-size: 35px;
+    }
+    .InputContainer {
+      margin-top: 10%;
+      width: 55%;
+    }
+    .TopLevelInput {
+      font-size: 25px;
+    }
+    .BottomLevelInput {
+      font-size: 25px;
+    }
+    .DarkWave {
+      bottom: 0%;
+      width: 220%;
+    }
+    .LightWave {
+      bottom: 1%;
+      width: 220%;
+    }
+  }
+  @media (max-width: 640px) {
+  }
+  @media (max-width: 560px) {
+  }
+  /*480px is max phone size*/
+  @media (max-width: 481px) {
+    .SearchPrompt {
+      font-size: 21px;
+    }
+    .InputContainer {
+      margin-top: 12%;
+      width: 70%;
+    }
+    .TopLevelInput {
+      font-size: 20px;
+    }
+    .BottomLevelInput {
+      font-size: 20px;
+    }
     .Logo {
-        top: 2%;
-        width: 20%;
+      width: 28%;
+      top: 5%;
+      left: 35%;
     }
-    @media (max-width: 1024px) {
-        /*Ipad Pro */
-        .SearchPrompt {
-            font-size: 45px;
-        }
-        .InputContainer {
-            margin-top: 10%;
-            width: 55%;
-        }
-        .TopLevelInput {
-            font-size: 30px;
-        }
-        .BottomLevelInput {
-            font-size: 30px;
-        }
-        .DarkWave {
-            bottom: -1%;
-            width: 200%;
-        }
-        .LightWave {
-            /* bottom: 1%; */
-            width: 200%;
-        }
+    .DarkWave {
+      bottom: 0%;
+      width: 300%;
     }
-    @media (max-width: 768px) {
-        /*Ipad */
-        .SearchPrompt {
-            font-size: 35px;
-        }
-        .InputContainer {
-            margin-top: 10%;
-            width: 55%;
-        }
-        .TopLevelInput {
-            font-size: 25px;
-        }
-        .BottomLevelInput {
-            font-size: 25px;
-        }
-        .DarkWave {
-            bottom: 0%;
-            width: 220%;
-        }
-        .LightWave {
-            bottom: 1%;
-            width: 220%;
-        }
+    .LightWave {
+      bottom: 1%;
+      width: 300%;
     }
-    @media (max-width: 640px) {}
-    @media (max-width: 560px) {}
-    /*480px is max phone size*/
-    @media (max-width: 481px) {
-        .SearchPrompt {
-            font-size: 21px;
-        }
-        .InputContainer {
-            margin-top: 12%;
-            width: 70%;
-        }
-        .TopLevelInput {
-            font-size: 20px;
-        }
-        .BottomLevelInput {
-            font-size: 20px;
-        }
-        .Logo {
-            width: 28%;
-            top: 5%;
-            left: 35%;
-        }
-        .DarkWave {
-            bottom: 0%;
-            width: 300%;
-        }
-        .LightWave {
-            bottom: 1%;
-            width: 300%;
-        }
+  }
+  @media (max-width: 375px) {
+    /*Iphone X */
+    .SearchPrompt {
+      font-size: 21px;
     }
-    @media (max-width: 375px) {
-        /*Iphone X */
-        .SearchPrompt {
-            font-size: 21px;
-        }
-        .InputContainer {
-            margin-top: 12%;
-            width: 70%;
-        }
-        .TopLevelInput {
-            font-size: 20px;
-        }
-        .BottomLevelInput {
-            font-size: 20px;
-        }
-        .Logo {
-            width: 28%;
-            top: 5%;
-            left: 35%;
-        }
-        .DarkWave {
-            bottom: 0%;
-            width: 300%;
-        }
-        .LightWave {
-            bottom: 1%;
-            width: 300%;
-        }
+    .InputContainer {
+      margin-top: 12%;
+      width: 70%;
     }
+    .TopLevelInput {
+      font-size: 20px;
+    }
+    .BottomLevelInput {
+      font-size: 20px;
+    }
+    .Logo {
+      width: 28%;
+      top: 5%;
+      left: 35%;
+    }
+    .DarkWave {
+      bottom: 0%;
+      width: 300%;
+    }
+    .LightWave {
+      bottom: 1%;
+      width: 300%;
+    }
+  }
 }
 
 @media only screen and (orientation: landscape) {
-    @media (max-width: 2560px) {}
-    @media (max-width: 2560px) {}
-    @media (max-width: 1920px) {}
-    @media (max-width: 1600px) {
-        .SearchPrompt {
-            font-size: 40px;
-        }
-        .TopLevelInput {
-            font-size: 20px;
-        }
-        .BottomLevelInput {
-            font-size: 20px;
-        }
+  @media (max-width: 2560px) {
+  }
+  @media (max-width: 2560px) {
+  }
+  @media (max-width: 1920px) {
+  }
+  @media (max-width: 1600px) {
+    .SearchPrompt {
+      font-size: 40px;
     }
-    @media (max-width: 1366px) {
-        .SearchPrompt {
-            font-size: 35px;
-        }
-        .TopLevelInput {
-            font-size: 20px;
-        }
-        .BottomLevelInput {
-            font-size: 20px;
-        }
+    .TopLevelInput {
+      font-size: 20px;
     }
-    @media (max-width: 1280px) {
-        .SearchPrompt {
-            font-size: 32px;
-        }
-        .TopLevelInput {
-            font-size: 20px;
-        }
-        .BottomLevelInput {
-            font-size: 20px;
-        }
+    .BottomLevelInput {
+      font-size: 20px;
     }
-    @media (max-width: 1152px) {}
-    @media (max-width: 1024px) {
-        /*Ipad */
-        .SearchPrompt {
-            font-size: 30px;
-        }
-        .TopLevelInput {
-            font-size: 25px;
-        }
-        .BottomLevelInput {
-            font-size: 25px;
-        }
+  }
+  @media (max-width: 1366px) {
+    .SearchPrompt {
+      font-size: 35px;
     }
-    @media (max-width: 896px) {
-        /*Iphone 11 PRO */
-        .SearchPrompt {
-            font-size: 25px;
-        }
-        .TopLevelInput {
-            font-size: 15px;
-        }
-        .BottomLevelInput {
-            font-size: 15px;
-        }
+    .TopLevelInput {
+      font-size: 20px;
     }
-    @media (max-width: 823px) {}
-    @media (max-width: 812px) {
-        .DarkWave {
-            width: 200%;
-        }
-        .LightWave {
-            width: 200%;
-        }
+    .BottomLevelInput {
+      font-size: 20px;
     }
-    @media (max-width: 736px) {
-        .SearchPrompt {
-            font-size: 22px;
-        }
-        .TopLevelInput {
-            font-size: 15px;
-        }
-        .BottomLevelInput {
-            font-size: 15px;
-        }
+  }
+  @media (max-width: 1280px) {
+    .SearchPrompt {
+      font-size: 32px;
     }
-    @media (max-width: 667px) {
-        .SearchPrompt {
-            font-size: 20px;
-        }
-        .TopLevelInput {
-            font-size: 15px;
-        }
-        .BottomLevelInput {
-            font-size: 15px;
-        }
+    .TopLevelInput {
+      font-size: 20px;
     }
+    .BottomLevelInput {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 1152px) {
+  }
+  @media (max-width: 1024px) {
+    /*Ipad */
+    .SearchPrompt {
+      font-size: 30px;
+    }
+    .TopLevelInput {
+      font-size: 25px;
+    }
+    .BottomLevelInput {
+      font-size: 25px;
+    }
+  }
+  @media (max-width: 896px) {
+    /*Iphone 11 PRO */
+    .SearchPrompt {
+      font-size: 25px;
+    }
+    .TopLevelInput {
+      font-size: 15px;
+    }
+    .BottomLevelInput {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 823px) {
+  }
+  @media (max-width: 812px) {
+    .DarkWave {
+      width: 200%;
+    }
+    .LightWave {
+      width: 200%;
+    }
+  }
+  @media (max-width: 736px) {
+    .SearchPrompt {
+      font-size: 22px;
+    }
+    .TopLevelInput {
+      font-size: 15px;
+    }
+    .BottomLevelInput {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 667px) {
+    .SearchPrompt {
+      font-size: 20px;
+    }
+    .TopLevelInput {
+      font-size: 15px;
+    }
+    .BottomLevelInput {
+      font-size: 15px;
+    }
+  }
 }

@@ -27,6 +27,7 @@ export const fetchTideData = (inputLocation) => {
     axios
       .get("/" + inputLocation)
       .then((response) => {
+        console.log(response);
         dispatch(fetchTideDataSuccess(response.data));
       })
       .catch((err) => {
