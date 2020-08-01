@@ -13,12 +13,36 @@ import lightWave from "../assets/background-images/lightwave.png";
 import darkWave from "../assets/background-images/darkwave.png";
 
 class LocationSearch extends Component {
-  state = {};
+  state = {
+    autocomplete: null,
+  };
 
   componentDidMount() {
     //
     console.log(locations[0]);
   }
+
+  inputFeedAutocomplete = (input) => {
+    for (const location of locations) {
+      if (
+        input.value &&
+        location.toLowerCase().startsWith(input.value.toLowerCase())
+      ) {
+        let temp;
+        temp =
+          input.value +
+          location.toLowerCase().split(input.location.toLowerCase())[1];
+        this.setState({
+          autocomplete: temp,
+        });
+      }
+    }
+    //Clearing
+    // hintInput.value = "";
+    this.setState({
+      autocomplete: "",
+    });
+  };
 
   submitLocation = (event) => {
     event.preventDefault();
@@ -29,24 +53,15 @@ class LocationSearch extends Component {
   render() {
     return (
       <div className={classes.LocationSearch}>
-        <img 
-          className={classes.Logo}
-          src={tidelyLogo}
-          alt="Tidely Logo"
-        />
+        <img className={classes.Logo} src={tidelyLogo} alt="Tidely Logo" />
         <div className={classes.SearchContainer}>
-          <div className={classes.SearchPrompt}>What is the <strong>tide</strong> like at the...</div>
+          <div className={classes.SearchPrompt}>
+            What is the <strong>tide</strong> like at the...
+          </div>
           <div className={classes.SearchBar}>placeolder search bar div</div>
         </div>
-        <img 
-          className={classes.LightWave}
-          src={lightWave}
-        />
-        <img 
-          className={classes.DarkWave}
-          src={darkWave}
-        />
-
+        <img className={classes.LightWave} src={lightWave} />
+        <img className={classes.DarkWave} src={darkWave} />
       </div>
     );
   }
