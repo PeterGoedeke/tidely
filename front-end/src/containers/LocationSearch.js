@@ -8,6 +8,10 @@ import classes from "./LocationSearch.module.css";
 
 import * as locations from "../assets/beaches/beaches.json";
 
+import tidelyLogo from "../assets/icons/logo.png";
+import lightWave from "../assets/background-images/lightwave.png";
+import darkWave from "../assets/background-images/darkwave.png";
+
 class LocationSearch extends Component {
   state = {};
 
@@ -25,10 +29,24 @@ class LocationSearch extends Component {
   render() {
     return (
       <div className={classes.LocationSearch}>
+        <img 
+          className={classes.Logo}
+          src={tidelyLogo}
+          alt="Tidely Logo"
+        />
         <div className={classes.SearchContainer}>
           <div className={classes.SearchPrompt}>What is the <strong>tide</strong> like at the...</div>
-          <div className={classes.SearchBar}>search bar</div>
+          <div className={classes.SearchBar}>placeolder search bar div</div>
         </div>
+        <img 
+          className={classes.LightWave}
+          src={lightWave}
+        />
+        <img 
+          className={classes.DarkWave}
+          src={darkWave}
+        />
+
       </div>
     );
   }

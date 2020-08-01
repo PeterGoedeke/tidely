@@ -17,11 +17,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 8%;
 }
 
 .SearchPrompt{
     text-align: center;
-    font-size: 40px;
+    font-size: 37px;
     font-family: "Open Sans", sans-serif; 
-    
+    color: white;
+}
+
+.Logo{
+    position: absolute;
+    width: 12%;
+    top: 5%;
+    left: 3%;
+
+}
+
+.LightWave{
+    position: absolute;
+    bottom: 0%;
+    width: 150%;
+}
+
+.DarkWave{
+    position: absolute;
+    bottom: -2%;
+    width: 150%;
+    left: -11%;
 }
