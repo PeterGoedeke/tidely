@@ -1,6 +1,8 @@
 {
   "name": "myapp",
   "version": "0.1.0",
+  "proxy": "http://localhost:3000",
+  "homepage": "https://tidely.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@datadog/browser-rum": "^1.13.0",
