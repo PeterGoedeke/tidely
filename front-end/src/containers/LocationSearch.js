@@ -20,9 +20,30 @@ class LocationSearch extends Component {
   };
 
   componentDidMount() {
-    //
-    console.log(locations.default);
+    window.addEventListener("keydown", this.onTabKey, false);
+    window.addEventListener("keydown", this.onEnterdown, false);
   }
+
+  // Key event listeners
+  onTabKey = (e) => {
+    if (e.keyCode === 9) {
+      // e.preventDefault();
+      this.setState({
+        inputValue: this.state.autocomplete,
+      });
+      // if (this.state.isStudent) {
+      //   this.submitHandler(e); // Submit on pressing enter
+      // }
+    }
+  };
+
+  onEnterdown = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+
+      this.submitLocation(e); // Submit on pressing enter
+    }
+  };
 
   inputFeedAutocomplete = (input) => {
     for (let location of locations.default) {
@@ -60,7 +81,8 @@ class LocationSearch extends Component {
 
   submitLocation = (event) => {
     event.preventDefault();
-
+    console.log(event.target.value);
+    this.props.fetchTideData(event.target.value);
     // Check that it is not empty
   };
 
@@ -85,6 +107,10 @@ class LocationSearch extends Component {
               disabled
               value={this.state.autocomplete}
             />
+            {/* <div>
+              <span>Hey</span>
+              <span>Hey</span>
+            </div> */}
             <img src={searchIcon} className={classes.SearchIcon} />
           </div>
         </div>
