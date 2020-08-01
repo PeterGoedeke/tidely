@@ -1,0 +1,9 @@
+// Post location to the server
+export const POST_LOCATION_START = "POST_LOCATION_START";
+export const POST_LOCATION_FAIL = "POST_LOCATION_FAIL";
+export const POST_LOCATION_SUCCESS = "POST_LOCATION_SUCCESS";
+
+// Fetch tide data
+export const FETCH_TIDE_DATA_START = "FETCH_TIDE_DATA_START";
+export const FETCH_TIDE_DATA_FAIL = "FETCH_TIDE_DATA_FAIL";
+export const FETCH_TIDE_DATA_SUCCESS = "FETCH_TIDE_DATA_SUCCESS";
