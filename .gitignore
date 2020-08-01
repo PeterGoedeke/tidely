@@ -1,3 +1,6 @@
+# Request files
+*.rest
+
 # Logs
 logs
 *.log
