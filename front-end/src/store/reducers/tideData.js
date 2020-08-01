@@ -1,7 +1,5 @@
 import * as actionTypes from "../actions/actionTypes";
 
-import { updateObject } from "../utility";
-
 /*
 
 This reducer is responsible for the event slice of the state 
@@ -51,7 +49,7 @@ const fetchTideDataSuccess = (state, action) => {
 
   return {
     ...state,
-    companies: action.companies,
+    tideData: action.tideData,
     loading: false,
   };
 };

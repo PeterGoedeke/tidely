@@ -20,12 +20,12 @@ export const fetchTideDataSuccess = (fetchedTideData) => {
     fetchedTideData: fetchedTideData,
   };
 };
-export const fetchTideData = () => {
+export const fetchTideData = (inputLocation) => {
   return (dispatch) => {
     dispatch(fetchTideDataStart());
 
     axios
-      .get("/user/")
+      .get("/" + inputLocation)
       .then((response) => {
         dispatch(fetchTideDataSuccess(response.data));
       })

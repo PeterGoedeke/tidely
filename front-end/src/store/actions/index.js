@@ -1,0 +1,1 @@
+export { fetchTideData } from "./fetchTideData";
