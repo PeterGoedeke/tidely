@@ -23,9 +23,9 @@ async function getWind({ lat, long }) {
     try {
         const response = await axios.get(process.env.OPEN_WEATHER_MAP_URL, {
             params: {
-                appid: process.env.OPEN_WEATHER_MAP_API_KEY,
                 lat,
                 lon: long,
+                appid: process.env.OPEN_WEATHER_MAP_API_KEY
             },
         })
         // retrieve the useful information from the api call and return
@@ -49,8 +49,8 @@ async function getWeather(latLng) {
     const todayTides = getTides(latLng, true)
     const weekPeaksTides = getTides(latLng)
 
-
     const response = await Promise.all([ todayTides, weekPeaksTides ])
+    console.log(response)
 
     return {
         nextLowAndHigh: getNextLowAndHigh(response[1].slice(0,2)),

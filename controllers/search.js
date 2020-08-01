@@ -3,6 +3,12 @@ const tides = require('./weather')
 const typos = require('./typos')
 
 async function search(req, res) {
+    console.log(req.params.search)
+
+    if(!req.params.search) {
+        return res.status(404).json({ message: 'No search term provided.' })
+    }
+
     const latLng = await geocode(req.params.search)
     // if the geocoding was successful then we can proceed and send tide information to the user
     if(latLng) {
