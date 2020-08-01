@@ -82,4 +82,5 @@ function onListening() {
 }
 
 const geocode = require('./controllers/geocode')
-geocode.geocode('orewa').then(x => console.log(x))
+// geocode('orewa').then(x => console.log(x))
+
