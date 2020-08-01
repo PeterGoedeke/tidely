@@ -13,12 +13,12 @@ async function geocode(searchTerm) {
             }
         })
         // retrieve the useful information from the api call and return
-        const latLngRaw = response.data.Response.View[0].Result[0].Location.DisplayPosition
-        const latLng = {
-            lat: latLngRaw.Latitude,
-            lng: latLngRaw.Longitue
+        const latLongRaw = response.data.Response.View[0].Result[0].Location.DisplayPosition
+        const latLong = {
+            lat: latLongRaw.Latitude,
+            long: latLongRaw.Longitude
         }
-        return latLng
+        return latLong
     }
     catch (err) {
         return err

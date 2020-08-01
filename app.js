@@ -10,13 +10,13 @@ const app = express()
 var port = process.env.PORT || '3000'
 app.set('port', port);
 
-const defaultRouter = require('./routes/default')
+const searchRouter = require('./routes/search')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'front-end/build')))
 
-app.use('/', defaultRouter)
+app.use('/', searchRouter)
 
 app.get('/*', (req, res) => {
     return res.sendFile(path.join(__dirname + '/front-end/build/index.html'))
@@ -84,3 +84,11 @@ function onListening() {
 const geocode = require('./controllers/geocode')
 // geocode('orewa').then(x => console.log(x))
 
+const tides = require('./controllers/tides');
+
+// (async function() {
+//     console.log(await tides(await geocode('orewa')))
+// })();
+
+
+const nearest = require('./controllers/nearest')
