@@ -17,7 +17,14 @@ class LocationSearch extends Component {
   };
 
   render() {
-    return <div>Hello World</div>;
+    return (
+      <div className={classes.LocationSearch}>
+        <div className={classes.SearchContainer}>
+          <div className={classes.SearchPrompt}>What is the <strong>tide</strong> like at the...</div>
+          <div className={classes.SearchBar}>search bar</div>
+        </div>
+      </div>
+    );
   }
 }
 export default LocationSearch;

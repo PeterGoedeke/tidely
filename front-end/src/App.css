@@ -1,0 +1,12 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+html{
+    margin: 0 !important; 
+}

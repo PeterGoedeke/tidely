@@ -1,3 +1,27 @@
-*{
-    background-color: brown;
+.LocationSearch{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #62B6CB;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.SearchContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchPrompt{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif; 
+    
 }

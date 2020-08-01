@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import './App.css';
 
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 
