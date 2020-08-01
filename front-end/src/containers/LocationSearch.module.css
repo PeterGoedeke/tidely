@@ -39,11 +39,43 @@
     position: absolute;
     bottom: 0%;
     width: 150%;
+    animation-name: wave1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .DarkWave{
     position: absolute;
-    bottom: -2%;
+    bottom: -3%;
     width: 150%;
     left: -11%;
+    animation-name: wave2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes wave1{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50%{
+        transform: translate(80px, -20px);
+    } 
+    100%{
+        transform: translate(8.4%, 0px);
+    }
+}
+
+@keyframes wave2{
+    0% {
+        transform: translate(0px, 0px);
+    }
+    /* 50%{
+        transform: translate(-80px, 20px);
+    }  */
+    100%{
+        transform: translate(-8.4%, 0px);
+    }
 }
