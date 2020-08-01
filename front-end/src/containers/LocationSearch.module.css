@@ -11,28 +11,28 @@
     padding: 0;
 }
 
-.SearchContainer{
+.SearchContainer {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 8%;
-}
+    width: 100%;
+  }
 
-.SearchPrompt{
+  .SearchPrompt {
     text-align: center;
-    font-size: 37px;
-    font-family: "Open Sans", sans-serif; 
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
     color: white;
-}
+  }
 
 .Logo{
     position: absolute;
     width: 12%;
     top: 5%;
     left: 3%;
-
 }
 
 .LightWave{
@@ -40,7 +40,7 @@
     bottom: 0%;
     width: 150%;
     animation-name: wave1;
-    animation-duration: 6s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -49,9 +49,9 @@
     position: absolute;
     bottom: -3%;
     width: 150%;
-    left: -11%;
+    left: -12%;
     animation-name: wave2;
-    animation-duration: 4s;
+    animation-duration: 6.7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -61,7 +61,7 @@
         transform: translate(0px, 0px);
     }
     50%{
-        transform: translate(80px, -20px);
+        transform: translate(4.2%, -20px);
     } 
     100%{
         transform: translate(8.4%, 0px);
@@ -72,10 +72,59 @@
     0% {
         transform: translate(0px, 0px);
     }
-    /* 50%{
-        transform: translate(-80px, 20px);
-    }  */
+    50%{
+        transform: translate(-4.2%, 10px);
+    } 
     100%{
         transform: translate(-8.4%, 0px);
     }
 }
+
+
+.InputContainer {
+    position: relative;
+    width: 40%;
+  
+    margin-top: 5%;
+  }
+
+  
+.TopLevelInput {
+    font-family: "Raleway", sans-serif;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    outline: 0;
+    width: 100%;
+    color: white;
+    bottom: 0;
+    font-weight: 300;
+  
+    font-size: 25px;
+  }
+  .TopLevelInput::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .BottomLevelInput {
+    font-family: "Raleway", sans-serif;
+    position: absolute;
+    z-index: 3;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0);
+    outline: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .SearchIcon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2.3vh;
+    margin-bottom: 1%;
+  }
+  
