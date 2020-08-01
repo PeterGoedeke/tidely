@@ -80,3 +80,6 @@ function onListening() {
         : 'port ' + addr.port
     debug('Listening on ' + bind)
 }
+
+const geocode = require('./controllers/geocode')
+geocode.geocode('orewa').then(x => console.log(x))
