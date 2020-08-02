@@ -33,3 +33,5 @@ NIWA_URL=https://api.niwa.co.nz/tides/data
 OPEN_WEATHER_MAP_API_KEY=ae808d83bafff6a11309c76e9fed6bb8
 
 OPEN_WEATHER_MAP_URL=https://api.openweathermap.org/data/2.5/weather
+
+classical-crow-zazvgp5car0fh26xzgg4wwkk.herokudns.com
