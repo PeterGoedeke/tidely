@@ -14,7 +14,8 @@ async function geocode(searchTerm) {
         })
         // if the user has entered an invalid search term, then return nothing
         if(response.data.Response.View.length == 0) {
-            return null
+            return searchTerm.includes(',') ? await geocode(searchTerm.split(',')[0])
+                : null
         }
         // retrieve the useful information from the api call and return
         const latLongRaw = response.data.Response.View[0].Result[0].Location.DisplayPosition
