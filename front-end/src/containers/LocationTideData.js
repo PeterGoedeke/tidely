@@ -10,6 +10,7 @@ import SearchBar from "../components/SearchBar/SearchBar";
 
 import searchIcon from "../assets/icons/search-2.png";
 import crossIcon from "../assets/icons/cross.png";
+import InfoCard from "../components/InfoCard/InfoCard";
 
 class LocationTideData extends Component {
   state = {

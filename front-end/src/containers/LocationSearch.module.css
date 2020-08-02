@@ -171,7 +171,7 @@
   position: absolute;
   font-family: "Raleway", sans-serif;
 
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0px 0px 11px 11px;
   width: 100%;
   z-index: 5;
 }
@@ -418,10 +418,10 @@
       font-size: 32px;
     }
     .TopLevelInput {
-      font-size: 20px;
+      font-size: 18px;
     }
     .BottomLevelInput {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   @media (max-width: 1152px) {
@@ -432,10 +432,10 @@
       font-size: 30px;
     }
     .TopLevelInput {
-      font-size: 25px;
+      font-size: 22px;
     }
     .BottomLevelInput {
-      font-size: 25px;
+      font-size: 22px;
     }
 
     @media (min-height: 768px){
@@ -456,10 +456,10 @@
       font-size: 25px;
     }
     .TopLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
     .BottomLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   @media (max-width: 823px) {
@@ -477,10 +477,10 @@
       font-size: 22px;
     }
     .TopLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
     .BottomLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
   @media (max-width: 667px) {
@@ -488,10 +488,10 @@
       font-size: 20px;
     }
     .TopLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
     .BottomLevelInput {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
 }
