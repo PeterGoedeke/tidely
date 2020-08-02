@@ -94,4 +94,3 @@ const tides = require('./controllers/weather');
 
 
 
-const nearest = require('./controllers/nearest')
