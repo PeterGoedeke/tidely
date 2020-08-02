@@ -18,9 +18,15 @@ class LocationTideData extends Component{
     render(){
         return(
             <div className={classes.LocationTideData}>
-                <div className={classes.TopBar}>top bar</div>
-                <div className={classes.WeatherInfo}>weather info</div>
-                <div className={classes.TideInfo}>tide indfo</div>
+                <div className={classes.TopBar}>
+                    logo + search bar
+                </div>
+                <div className={classes.WeatherInfo}>
+                    weather info
+                    </div>
+                <div className={classes.TideInfo}>
+                    tide indfo
+                </div>
             </div>
         )
     }
