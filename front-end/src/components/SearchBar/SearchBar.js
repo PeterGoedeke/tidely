@@ -101,6 +101,7 @@ class Searchbar extends Component {
     // Check that it is not empty
   };
   render() {
+    console.log(this.props.tideData);
     let searchBar = (
       <div className={classes.InputContainer}>
         <input
@@ -126,7 +127,7 @@ class Searchbar extends Component {
               ) {
                 return (
                   <span
-                    style={{ borderRadius: "0px 0px 12px 12px" }}
+                    style={{ borderRadius: "0px 0px 20px 20px" }}
                     className={classes.SuggestionSpan}
                     onClick={() => this.submitSuggestion(location)}
                     key={location}
@@ -167,8 +168,11 @@ class Searchbar extends Component {
       searchBar = <Spinner />;
     }
 
+    console.log(this.props.tideData);
     let redirect = null;
-    if (!this.props.tideData) {
+    if (this.props.tideData) {
+      console.log("hello");
+
       redirect = <Redirect to="/tide-data" />;
     }
     return (

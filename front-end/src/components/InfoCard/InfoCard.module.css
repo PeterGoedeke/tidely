@@ -1,50 +1,47 @@
-.InfoCardContainer{
-    width: 500px;
-    height: 150px;
-    background-color: #5CABBF;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
+.InfoCardContainer {
+  width: 90%;
+  height: 20vh;
+  background-color: #5cabbf;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 
-.Icon{
-    padding: 5%;
-    width: 6%;
+.Icon {
+  padding: 5%;
+  width: 6%;
 }
 
-.TimeRange{
-    width: 20%;
-    padding: 0% 5%;
-    font-family: "Raleway", sans-serif;
-    color: white;
+.TimeRange {
+  width: 20%;
+  padding: 0% 5%;
+  font-family: "Raleway", sans-serif;
+  color: white;
 }
 
-.Time{
-    margin: -10px;
-    font-size: 25px;
+.Time {
+  margin: -10px;
+  font-size: 25px;
 }
 
-.InfoContainer{
-    padding: 0% 5%;
-    width: 70%;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
-    color: white;
-    border-left: 1px solid white;
+.InfoContainer {
+  padding: 0% 5%;
+  width: 70%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: white;
+  border-left: 1px solid white;
 }
 
-.Line{
-    justify-self: right;
-    margin-left: -9%;
-    width: 250px;
-    border-top: 1px solid white;
+.Line {
+  justify-self: right;
+  margin-left: -9%;
+  width: 250px;
+  border-top: 1px solid white;
 }
 
-.WeatherIcons{
-   width: 10%;
-   margin-right: 3%;
+.WeatherIcons {
+  width: 10%;
+  margin-right: 3%;
 }
-
-
-

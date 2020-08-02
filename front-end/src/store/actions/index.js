@@ -1,1 +1,1 @@
-export { fetchTideData } from "./fetchTideData";
+export { fetchTideData, fetchTideDataSuccess } from "./fetchTideData";

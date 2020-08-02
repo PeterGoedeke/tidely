@@ -11,17 +11,7 @@ and display the event timer (when the event expires)
 
 */
 const initialState = {
-  tideData: {
-    location: "",
-    boatData: {
-      startTime: [],
-      endTime: [],
-    },
-    walkingData: {
-      startTime: [],
-      endTime: [],
-    },
-  },
+  tideData: null,
   loading: false,
   error: null,
 };
@@ -34,22 +24,9 @@ const fetchTideDataStart = (state, action) => {
 };
 
 const fetchTideDataSuccess = (state, action) => {
-  // Format as follows
-  // tideData: {
-  //     location: "",
-  //     boatData: {
-  //       startTime: [],
-  //       endTime: [],
-  //     },
-  //     walkingData: {
-  //       startTime: [],
-  //       endTime: [],
-  //     },
-  //   },
-
   return {
     ...state,
-    tideData: action.tideData,
+    tideData: action.fetchedTideData,
     loading: false,
   };
 };

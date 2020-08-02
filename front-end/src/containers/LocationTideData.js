@@ -23,53 +23,36 @@ class LocationTideData extends Component {
     title: "",
   };
 
-  componentDidMount() {
-    this.setState({
-      title: this.props.tideData.placename,
-    });
-    const userConfig = JSON.parse(localStorage.getItem("userConfig"));
-
-    console.log(userConfig);
-  }
   toggleLowWind = () => {
     //toggle state and local storage
 
     this.setState({
       lowWind: !this.state.lowWind,
     });
-    this.setLocalStorage();
   };
 
   toggleHighWind = () => {
     this.setState({
       highWind: !this.state.highWind,
     });
-    this.setLocalStorage();
   };
 
   toggleLowTide = () => {
     this.setState({
       lowTide: !this.state.lowTide,
     });
-    this.setLocalStorage();
   };
 
   toggleMidTide = () => {
     this.setState({
       midTide: !this.state.midTide,
     });
-    this.setLocalStorage();
   };
 
   toggleHighTide = () => {
     this.setState({
       highTide: !this.state.highTide,
     });
-    this.setLocalStorage();
-  };
-
-  setLocalStorage = () => {
-    localStorage.setItem("userConfig", JSON.stringify(this.state));
   };
 
   showSearchOverlay = () => {
@@ -83,6 +66,50 @@ class LocationTideData extends Component {
       showSearchOverlay: false,
     });
   };
+
+  getWalkingTimes = (weatherInfo) => {
+    const low = weatherInfo.tide.nextPeaks.low.time;
+    const high = weatherInfo.tide.nextPeaks.high.time;
+
+    const startTime = this.timeStringToNumber(low);
+    const start =
+      Math.round(
+        (startTime[0] - 12 / 3 + (startTime[1] - 25 / 3) / 100) * 100
+      ) / 100;
+
+    const endTime = this.timeStringToNumber(high);
+    const end =
+      Math.round((endTime[0] + 12 / 3 + (endTime[1] + 25 / 3) / 100) * 100) /
+      100;
+
+    return { start, end };
+  };
+
+  getBoatingTimes = (weatherInfo) => {
+    const low = weatherInfo.tide.nextPeaks.low.time;
+    const high = weatherInfo.tide.nextPeaks.high.time;
+
+    const startTime = this.timeStringToNumber(high);
+    const start =
+      Math.round(
+        (startTime[0] - 12 / 3 + (startTime[1] - 25 / 3) / 100) * 100
+      ) / 100;
+
+    const endTime = this.timeStringToNumber(low);
+    const end =
+      Math.round((endTime[0] + 12 / 3 + (endTime[1] + 25 / 3) / 100) * 100) /
+      100;
+
+    return { start, end };
+  };
+
+  timeStringToNumber = (x) => {
+    return x
+      .slice(-9, -4)
+      .split(":")
+      .map((y) => Number(y));
+  };
+
   render() {
     let searchOverlay = (
       <div className={classes.SearchOverlay}>
@@ -96,6 +123,11 @@ class LocationTideData extends Component {
       backgroundColor: "rgba(255, 255, 255, 1)",
       color: "#62b6cb",
     };
+    console.log(this.props.tideData);
+
+    const walking = this.getWalkingTimes(this.props.tideData);
+    let startW = walking.start;
+    let endW = walking.end;
     return (
       <div className={classes.LocationTideData}>
         {searchOverlay}
@@ -124,7 +156,7 @@ class LocationTideData extends Component {
           {/* <SearchBar /> */}
         </div>
         <div className={classes.TitleContainer}>
-          <h2>Mission Bay, Auckland</h2>
+          <h2>{this.props.tideData.placename}</h2>
           <div className={classes.ButtonsContainer}>
             <div className={classes.WindButtonsContainer}>
               <button
@@ -162,7 +194,23 @@ class LocationTideData extends Component {
             </div>
           </div>
         </div>
-        <div className={classes.TideInfo}>tide indfo</div>
+        <div className={classes.TideInfo}>
+          <InfoCard
+            rain={this.props.tideData.env.weatherDescription}
+            wind={
+              "The wind speed is " + this.props.tideData.env.wind.speed + "m/s"
+            }
+            startTime={startW}
+            endTime={endW}
+          />
+          <InfoCard
+            rain={this.props.tideData.env.weatherDescription}
+            wind={
+              "The wind speed is " + this.props.tideData.env.wind.speed + "m/s"
+            }
+            isBoat={true}
+          />
+        </div>
       </div>
     );
   }
