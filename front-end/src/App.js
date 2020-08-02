@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import './App.css';
+import "./App.css";
 
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 
@@ -12,7 +12,8 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/" component={LocationTideData} exact />
+        <Route path="/" component={LocationSearch} exact />
+        {/* <Route path="/" component={LocationTideData} exact /> */}
         <Route path="/tide-data" component={LocationTideData} exact />
         <Redirect to="/" />
       </Switch>

@@ -12,28 +12,20 @@ import tidelyLogo from "../assets/icons/logo.png";
 
 import searchIcon from "../assets/icons/search-2.png";
 
-class LocationTideData extends Component{
-    state = {}
+class LocationTideData extends Component {
+  state = {};
 
-    render(){
-        return(
-            <div className={classes.LocationTideData}>
-                <div className={classes.TopBar}>
-                    <img
-                        src={tidelyLogo}
-                        className={classes.Logo}
-                    />
-                </div>
-                <div className={classes.WeatherInfo}>
-                    weather info
-                    </div>
-                <div className={classes.TideInfo}>
-                    tide indfo
-                </div>
-            </div>
-        )
-    }
-
+  render() {
+    return (
+      <div className={classes.LocationTideData}>
+        <div className={classes.TopBar}>
+          <img src={tidelyLogo} className={classes.Logo} alt="Tidely Logo" />
+        </div>
+        <div className={classes.WeatherInfo}>weather info</div>
+        <div className={classes.TideInfo}>tide indfo</div>
+      </div>
+    );
+  }
 }
 
 export default LocationTideData;
