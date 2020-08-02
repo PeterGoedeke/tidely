@@ -211,8 +211,24 @@
 @media only screen and (orientation: portrait) {
   .Logo {
     top: 2%;
-    width: 20%;
+    width: 18%;
   }
+  
+  .Bird1{
+      /* width: 5%; */
+      top: 37%;
+  }
+
+  .Bird2{
+      /* width: 5%; */
+      top: 34%;
+  }
+
+  .Bird3{
+      /* width: 5%; */
+      top: 32%;
+  }
+  
   @media (max-width: 1024px) {
     /*Ipad Pro */
     .SearchPrompt {
@@ -235,6 +251,20 @@
     .LightWave {
       /* bottom: 1%; */
       width: 200%;
+    }
+    
+    .Bird1{
+        right: 25%;
+    }
+    
+    .Bird2{
+        right: 17%;
+
+    }
+
+    .Bird3{
+        right: 23%;
+
     }
   }
   @media (max-width: 768px) {
@@ -293,6 +323,24 @@
       bottom: 1%;
       width: 300%;
     }
+
+    .Bird1{
+        /* width: 5%; */
+        top: 40%;
+        right: 20%;
+    }
+  
+    .Bird2{
+        /* width: 5%; */
+        top: 38%;
+        right: 12%;
+    }
+  
+    .Bird3{
+        /* width: 5%; */
+        top: 36%;
+        right: 18%;
+    }
   }
   @media (max-width: 375px) {
     /*Iphone X */
@@ -343,7 +391,7 @@
       font-size: 20px;
     }
   }
-  @media (max-width: 1366px) {
+  @media (max-width: 1366px){
     .SearchPrompt {
       font-size: 35px;
     }
@@ -352,6 +400,17 @@
     }
     .BottomLevelInput {
       font-size: 20px;
+    }
+    @media (min-height: 1024px){
+        .Bird1{
+            top: 32%;
+        }
+        .Bird2{
+            top: 29%;
+        }
+        .Bird3{
+            top: 26%;
+        }
     }
   }
   @media (max-width: 1280px) {
@@ -377,6 +436,18 @@
     }
     .BottomLevelInput {
       font-size: 25px;
+    }
+
+    @media (min-height: 768px){
+        .Bird1{
+            top: 32%;
+        }
+        .Bird2{
+            top: 29%;
+        }
+        .Bird3{
+            top: 26%;
+        }
     }
   }
   @media (max-width: 896px) {
