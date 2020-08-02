@@ -19,7 +19,10 @@ class LocationTideData extends Component{
         return(
             <div className={classes.LocationTideData}>
                 <div className={classes.TopBar}>
-                    logo + search bar
+                    <img
+                        src={tidelyLogo}
+                        className={classes.Logo}
+                    />
                 </div>
                 <div className={classes.WeatherInfo}>
                     weather info
