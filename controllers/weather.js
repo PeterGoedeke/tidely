@@ -88,9 +88,9 @@ async function getWeather(latLng) {
     const tideInfo = getTides(latLng)
     const environmentInfo = getEnvironmentWeather(latLng)
 
-    const response = await Promise.all([ tideInfo, environmentInfo ])
+    const [tide, env] = await Promise.all([ tideInfo, environmentInfo ])
 
-    return response
+    return { tide, env }
 }
 
 module.exports = getWeather

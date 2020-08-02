@@ -19,7 +19,7 @@ async function search(req, res) {
     // if the geocoding was successful then we can proceed and send tide information to the user
     if(latLng) {
         const weatherInfo = await getWeather(latLng)
-        return res.status(200).json(weatherInfo)
+        return res.status(200).json({ placename: req.params.search, ...weatherInfo })
     }
     // otherwise, we send a 404 response with suggestions of possible typos
     const suggestions = typos(req.params.search)
