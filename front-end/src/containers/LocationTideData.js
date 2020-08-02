@@ -128,6 +128,7 @@ class LocationTideData extends Component {
     // const walking = this.getWalkingTimes(this.props.tideData);
     // let startW = walking.start;
     // let endW = walking.end;
+
     return (
       <div className={classes.LocationTideData}>
         {searchOverlay}
