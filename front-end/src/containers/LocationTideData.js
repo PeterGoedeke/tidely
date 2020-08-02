@@ -125,9 +125,9 @@ class LocationTideData extends Component {
     };
     console.log(this.props.tideData);
 
-    const walking = this.getWalkingTimes(this.props.tideData);
-    let startW = walking.start;
-    let endW = walking.end;
+    // const walking = this.getWalkingTimes(this.props.tideData);
+    // let startW = walking.start;
+    // let endW = walking.end;
     return (
       <div className={classes.LocationTideData}>
         {searchOverlay}
@@ -200,8 +200,8 @@ class LocationTideData extends Component {
             wind={
               "The wind speed is " + this.props.tideData.env.wind.speed + "m/s"
             }
-            startTime={startW}
-            endTime={endW}
+            // startTime={startW}
+            // endTime={endW}
           />
           <InfoCard
             rain={this.props.tideData.env.weatherDescription}

@@ -22,11 +22,11 @@ const InfoCard = (props) => {
                 className={classes.Icon}
             />
             <div className={classes.TimeRange}>
-                {/* <p className={classes.Time}><strong>{props.startTime}</strong></p> */}
-                <p className={classes.Time}><strong>20PM</strong></p>
+                <p className={classes.Time}><strong>{props.startTime}</strong></p>
+                {/* <p className={classes.Time}><strong>20PM</strong></p> */}
                 <p>to</p>
-                {/* <p className={classes.Time}><strong>{props.finishTime}</strong></p> */}
-                <p className={classes.Time}><strong>20PM</strong></p>
+                <p className={classes.Time}><strong>{props.finishTime}</strong></p>
+                {/* <p className={classes.Time}><strong>20PM</strong></p> */}
             </div>
 
             <div className={classes.InfoContainer}>
