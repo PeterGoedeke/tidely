@@ -126,7 +126,7 @@ class Searchbar extends Component {
               ) {
                 return (
                   <span
-                    style={{ borderRadius: "0px 0px 20px 20px" }}
+                    style={{ borderRadius: "0px 0px 12px 12px" }}
                     className={classes.SuggestionSpan}
                     onClick={() => this.submitSuggestion(location)}
                     key={location}

@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/" component={LocationTideData} exact />
+        <Route path="/" component={LocationSearch} exact />
         <Route path="/tide-data" component={LocationTideData} exact />
         <Redirect to="/" />
       </Switch>
