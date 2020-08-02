@@ -19,3 +19,14 @@ AWS TAM: Taz Hussein <awstas@amazon.com>
 - Tola
 - Mercury
 - Simon Murcott <simon.murcott@lyniate.com>
+
+## Example .env setup
+
+GEOCODE_API_KEY=o2VEM15oG-DJ3JKdTdgz3RAKQMAStS42dN0_aSjxP_0
+GEOCODE_URL=https://geocoder.ls.hereapi.com/6.2/geocode.json
+
+NIWA_API_KEY=Y4rGDrxnsBiMwTPA0nZGBVDncV34xXx3
+NIWA_URL=https://api.niwa.co.nz/tides/data
+
+OPEN_WEATHER_MAP_API_KEY=ae808d83bafff6a11309c76e9fed6bb8
+OPEN_WEATHER_MAP_URL=https://api.openweathermap.org/data/2.5/weather
