@@ -1,0 +1,28 @@
+.LocationTideData{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    "topbar topbar"
+    "weatherinfo tideinfo";
+    background-color: #62B6CB;
+}
+
+.TopBar{
+    grid-area: topbar;
+    background-color: rgba(109, 109, 109, 0.397);
+
+}
+
+.WeatherInfo{
+    grid-area: weatherinfo;
+    background-color: rgba(77, 77, 77, 0.377);
+}
+
+.TideInfo{
+    grid-area: tideinfo;
+    background-color: rgba(136, 49, 17, 0.281);
+}
+
