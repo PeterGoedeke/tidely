@@ -1,31 +1,119 @@
-.LocationTideData{
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 80%;
-    grid-template-areas:
+.LocationTideData {
+  /* display: grid; */
+  height: 100%;
+  width: 100%;
+  background-color: #62b6cb;
+  /* grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%; */
+  /* grid-template-areas:
     "topbar topbar"
     "weatherinfo tideinfo";
-    background-color: #62B6CB;
+    background-color: #62B6CB; */
 }
 
-.TopBar{
-    grid-area: topbar;
-    background-color: rgba(109, 109, 109, 0.397);
-
+.TopBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 1%;
+  justify-content: space-between;
 }
 
-.WeatherInfo{
-    grid-area: weatherinfo;
-    background-color: rgba(77, 77, 77, 0.377);
+.SearchOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  background-color: rgba(98, 182, 203, 0.95);
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
 }
 
-.TideInfo{
-    grid-area: tideinfo;
-    background-color: rgba(136, 49, 17, 0.281);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.Logo{
-    width: 15%;
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.IconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 20%;
+  padding-right: 10%;
+  cursor: pointer;
+}
+.IconContainer input {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  outline: 0;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 300;
+}
+.SearchIcon {
+  height: 2.5vh;
+  padding-left: 5%;
+}
+
+.Logo {
+  width: 8%;
+  padding: 1%;
+  z-index: 100;
+}
+
+.crossIcon {
+  height: 3vh;
+  z-index: 100;
+  padding: 1%;
+  margin-right: 5%;
+  cursor: pointer;
 }
