@@ -117,3 +117,76 @@
   margin-right: 5%;
   cursor: pointer;
 }
+
+.TitleContainer {
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.TitleContainer h2 {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  padding-left: 1%;
+}
+
+.ButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  margin-right: 10%;
+  justify-content: space-between;
+}
+.TideButtonsContainer {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45%;
+}
+.WindButtonsContainer {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+
+  width: 45%;
+}
+.WindButtonsContainer button {
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 1.5% 4% 1.5% 4%;
+  margin-right: 2%;
+  border-radius: 25px;
+}
+
+.TideButtonsContainer button {
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 1.5% 4% 1.5% 4%;
+  border-radius: 15px;
+}
+
+/* .TideButtonsContainer button:focus {
+  background-color: rgba(255, 255, 255, 1);
+  color: #62b6cb;
+}
+.WindButtonsContainer button:focus {
+  background-color: rgba(255, 255, 255, 1);
+  color: #62b6cb;
+} */
